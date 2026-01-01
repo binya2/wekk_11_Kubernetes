@@ -1,1 +1,0 @@
-# wekk_11_Kubernetes
