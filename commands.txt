@@ -1,0 +1,47 @@
+#Dockerfile Commands
+docker build -t beni2/week_11_test:v1 .
+docker run -d --name server1 -p 8501:8501  week_11_test:v1
+docker push beni2/week_11_test:v1
+
+#Kubernetes commands
+minikube delete
+minikube start --driver=docker
+kubectl apply -f pod.yaml
+kubectl apply -f service.yaml
+minikube service rest-service
+
+#minikube testing commands
+kubectl logs test-service
+kubectl logs test
+kubectl get services
+kubectl get pods
+
+#git commands
+git clone
+git add .
+git commit -m "Update .gitignore to include .idea and .vscode directories"
+git checkout -b Dev
+Download the project files in a ZIP folder
+git add .
+git commit -m "Add initial Streamlit app with data visualization features"
+git Checkout -b Dockerfile
+git add .
+git commit -m "Set up Docker environment with Dockerfile and .dockerignore"
+git checkout Dev
+git checkout -b pod_file
+git add .
+git commit -m "Add pod.yaml and pod.md files for Kubernetes pod configuration"
+git checkout Dev
+git checkout -b service_file
+git add .
+git commit -m "Add service.yaml and service.md for pod communication setup"
+git checkout Dev
+git merge Dockerfile
+git merge pod_file
+git merge service_file
+git add .
+git commit -m "Add commands.txt for Docker and Kubernetes setup instructions"
+git push origin Dev
+git checkout main
+git merge Dev
+git push origin main
